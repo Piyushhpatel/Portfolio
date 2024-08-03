@@ -1,7 +1,5 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import BgWrapper from "@/components/BgWrapper";
-import SideBar from "@/components/SideBar";
 import { Providers } from "./providers";
 
 const poppins = Poppins({subsets: ["latin"], weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"]})
@@ -14,12 +12,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={poppins.className}>
-        <Providers>
-        <BgWrapper>
-        <SideBar/>
+      <body className={`${poppins.className} bg-[#040d21]`}>
+        <Providers>        
         {children}
-        </BgWrapper>
         </Providers>
       </body>
     </html>

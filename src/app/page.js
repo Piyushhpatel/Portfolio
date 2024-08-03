@@ -1,9 +1,21 @@
 import AboutUs from "@/components/AboutUs";
+import BgWrapper from "@/components/BgWrapper";
+import SideBar from "@/components/SideBar";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center w-full h-full">
+    <>
+    <div className="h-screen w-screen fixed">
+      <BgWrapper/>
+    </div>
+    <div className="flex p-8 gap-5">
+      <div className="hidden lg:block sticky top-8 min-w-[300px] ml-5 max-h-[90vh]">
+      <SideBar />
+      </div>
+      <div className="flex flex-col justify-center items-center w-full gap-8">
       <AboutUs/>
-    </main>
+      </div>
+    </div>
+    </>
   );
 }

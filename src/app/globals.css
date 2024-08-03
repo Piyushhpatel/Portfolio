@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+} 
 
 #space, .stars {
     overflow: hidden;
@@ -65,4 +68,19 @@
       transform: scale(3.5);
     }
   }
-  
+
+/* Hide scrollbar for webkit-based browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+html {
+  scrollbar-width: none; /* Hide scrollbar */
+}
+
+/* Ensuring scrolling is still possible */
+body {
+  overflow: -moz-scrollbars-none; /* For older versions of Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}

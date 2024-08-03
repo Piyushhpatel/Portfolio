@@ -2,8 +2,8 @@ import Link from "next/link";
 
 const SideBar = () => {
   return (
-    <aside className="max-w-[300px] w-full max-h-[950px] self-start h-full bg-gradient-to-t from-[#E88DFF] to-[#2DBFFE] p-[3px] rounded-[15px]">
-      <div className="flex flex-col py-8 items-center justify-between max-w-[300px] w-full max-h-[92vh] h-full bg-[#0C162D] rounded-[12px] backdrop:blur-sm">
+    <aside className="hidden lg:flex max-w-[300px] w-full min-h-[92vh] h-full bg-gradient-to-t from-[#E88DFF] to-[#2DBFFE] p-[3px] rounded-[15px]">
+      <div className="flex flex-col py-8 items-center justify-between max-w-[300px] w-full min-h-[91vh] h-full bg-[#0C162D] rounded-[12px] backdrop:blur-sm">
         {/* Name Section */}
         <div className="flex flex-col items-center justify-between gap-4">
           <img
