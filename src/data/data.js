@@ -125,3 +125,66 @@ export const SkillsData = [
     icon: "/devicons/blender.svg",
   },
 ];
+
+
+export const ProjectData = {
+  Web: [
+    {
+      id: 1,
+      name: "Case Cobra",
+      thumbnail: "/projects/casecobra.png"
+    },
+    {
+      id: 2,
+      name: "Razorpay Landing Page",
+      thumbnail: "/projects/razorpay.png"
+    },
+    {
+      id: 3,
+      name: "Weather App",
+      thumbnail: "/projects/weatherapp.png"
+    },
+  ],
+  App: [
+    {
+      id: 1,
+      name: "Food Delivery App",
+      thumbnail: "/projects/bytecraft.png"
+    },
+    {
+      id: 2,
+      name: "Mental Health Tracker",
+      thumbnail: "/projects/mindswell.jpeg"
+    },
+  ],
+  Software: [
+    {
+      id: 1,
+      name: "Mini C Compiler",
+      thumbnail: "/projects/compiler.jpeg"
+    },
+    {
+      id: 2,
+      name: "audittool",
+      thumbnail: "/projects/audittool.jpg"
+    },
+  ]
+}
+
+export const CertificateData = [
+  {
+    id: 1,
+    name: "React Crash Course",
+    certificate: "/certificates/react.png",
+  },
+  {
+    id: 2,
+    name: "JPMC Virtual Software Engineering",
+    certificate: "/certificates/jpmc.png",
+  },
+  {
+    id: 3,
+    name: "Flutter Crash Course",
+    certificate: "/certificates/flutter.jpg",
+  },
+]

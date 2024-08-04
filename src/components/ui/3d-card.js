@@ -15,8 +15,8 @@ export const CardContainer = ({
   children,
   className,
   containerClassName,
-  radius = 100, // Decrease radius for a smaller light effect
-  color = "rgba(255, 255, 255, 0.2)", // Lower opacity for less luminance
+  radius = 120, // Decrease radius for a smaller light effect
+  color = "rgba(59, 130, 246, 0.4)", // Lower opacity for less luminance
 }) => {
   const containerRef = useRef(null);
   const [isMouseEntered, setIsMouseEntered] = useState(false);
@@ -48,7 +48,7 @@ export const CardContainer = ({
     <MouseEnterContext.Provider value={[isMouseEntered, setIsMouseEntered]}>
       <div
         className={cn(
-          "py-20 flex items-center justify-center relative",
+          "flex items-center justify-center relative",
           containerClassName
         )}
         style={{
