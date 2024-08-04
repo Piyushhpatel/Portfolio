@@ -14,6 +14,7 @@ const SkillBubble = ({name, icon}) => {
         <img
           src={icon}
           className="w-[50px] h-[50px] rounded-full shadow-blue-300 shadow-md"
+          alt={name}
         />
       </div>
     </div>

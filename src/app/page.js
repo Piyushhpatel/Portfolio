@@ -43,6 +43,7 @@ export default function Home() {
             <img
               src="/avtar.jpeg"
               className="h-[30px] w-[30px] rounded-full opacity-75 "
+              alt="avtar"
             />
             <div>
             <svg

@@ -89,6 +89,7 @@ const SideBar = ({ activeSection = "aboutus" }) => {
                 <img
                   src="/socials/leetcode.jpg"
                   className="w-[30px] h-[30px] rounded-full bg-white select-none"
+                  alt="leetcode"
                 />
               </Link>
               <Link
@@ -99,6 +100,7 @@ const SideBar = ({ activeSection = "aboutus" }) => {
                 <img
                   src="/socials/linkedin.png"
                   className="w-[30px] h-[30px] rounded-full bg-white select-none"
+                  alt="linkedin"
                 />
               </Link>
               <Link
@@ -109,6 +111,7 @@ const SideBar = ({ activeSection = "aboutus" }) => {
                 <img
                   src="/socials/github.png"
                   className="w-[30px] h-[30px] rounded-full bg-white select-none"
+                  alt="github"
                 />
               </Link>
               <Link
@@ -119,6 +122,7 @@ const SideBar = ({ activeSection = "aboutus" }) => {
                 <img
                   src="/socials/twitter.png"
                   className="w-[30px] h-[30px] rounded-full bg-white select-none"
+                  alt="twitter"
                 />
               </Link>
             </div>
