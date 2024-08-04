@@ -65,7 +65,7 @@ export default function Home() {
         <div className="hidden lg:block sticky top-8 min-w-[300px] ml-5 max-h-[90vh]">
           <SideBar activeSection={activeSection} />
         </div>
-        <div className="relative flex flex-col px-8 lg:px-0 justify-center items-center w-full gap-8 lg:ml-14">
+        <div className="relative flex flex-col px-4 lg:px-0 justify-center items-center w-full gap-8 lg:ml-14">
           <div ref={aboutInViewRef} id="aboutus" className="w-full">
             <AboutUs />
           </div>
