@@ -66,7 +66,7 @@ export default function Home() {
           <SideBar activeSection={activeSection} />
         </div>
         <div className="relative flex flex-col px-8 lg:px-0 justify-center items-center w-full gap-8 lg:ml-14">
-          <div ref={aboutInViewRef} id="aboutus" className="-z-10 w-full">
+          <div ref={aboutInViewRef} id="aboutus" className="w-full">
             <AboutUs />
           </div>
           <div ref={skillInViewRef} id="skills" className=" w-full">
