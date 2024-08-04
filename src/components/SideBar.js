@@ -25,13 +25,13 @@ const SideBar = () => {
         <div className="z-10 flex">
           <ul className="flex flex-col items-center justify-center gap-3">
             <li className="text-white/80 text-center text-[16px] font-semibold w-full border-b hover:scale-105 transition-all duration-300">
-              <a href="#">About Us</a>
+              <a href="#aboutus">About Us</a>
             </li>
             <li className="text-white/80 text-center text-[16px] w-full hover:scale-105 transition-all duration-300">
-              <a href="#">Skills</a>
+              <a href="#skills">Skills</a>
             </li>
             <li className="text-white/80 text-[16px] text-center w-full hover:scale-105 transition-all duration-300">
-              <a href="#">Projects</a>
+              <a href="#projects">Projects</a>
             </li>
             <li className="text-white/80 text-[16px] w-full text-center hover:scale-105 transition-all duration-300">
               <a href="#">Certificates</a>

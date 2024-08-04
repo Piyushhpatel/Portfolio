@@ -1,6 +1,8 @@
 import AboutUs from "@/components/AboutUs";
 import BgWrapper from "@/components/BgWrapper";
+import Projects from "@/components/Projects";
 import SideBar from "@/components/SideBar";
+import Skills from "@/components/Skills";
 
 export default function Home() {
   return (
@@ -14,6 +16,8 @@ export default function Home() {
       </div>
       <div className="flex flex-col justify-center items-center w-full gap-8">
       <AboutUs/>
+      <Skills/>
+      <Projects/>
       </div>
     </div>
     </>
