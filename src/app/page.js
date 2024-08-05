@@ -159,6 +159,7 @@ export default function Home() {
                 className={`text-center text-[16px] font-semibold w-full hover:scale-105 select-none ${
                   activeSection === "projects" ? "text-white" : "text-white/80"
                 }`}
+                onClick={() => setShowNav(false)}
               >
                 <a href="#projects">Projects</a>
                 <div
