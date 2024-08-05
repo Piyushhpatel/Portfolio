@@ -135,7 +135,7 @@ export default function Home() {
               }`}
               onClick={() => setShowNav(false)}
             >
-              <a href="#aboutus">About Us</a>
+              <a href="#aboutus">About Me</a>
               <div
                 className={`h-[2px] bg-white w-full ${
                   activeSection === "aboutus" ? "opacity-1" : "opacity-0"

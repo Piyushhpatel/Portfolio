@@ -30,7 +30,7 @@ const SideBar = ({ activeSection = "aboutus" }) => {
                   activeSection === "aboutus" ? "text-white" : "text-white/80"
                 }`}
               >
-                <a href="#aboutus">About Us</a>
+                <a href="#aboutus">About Me</a>
                 <div
                   className={`h-[2px] bg-white w-full ${
                     activeSection === "aboutus" ? "opacity-1" : "opacity-0"
