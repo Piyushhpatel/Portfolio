@@ -1,3 +1,4 @@
+import Link from "next/link";
 import ExpEdu from "./EduExp";
 import NoSsr from "./no-ssr";
 import SkillBubble from "./SkillBubble";
@@ -35,6 +36,54 @@ const AboutUs = () => {
                 exciting journey of technology and laughter. Together, to write
                 the next chapter of digital wonders!
               </p>
+            </div>
+            <div className="lg:hidden mt-6">
+            <div className="flex items-center gap-3">
+              <Link
+                href={"https://leetcode.com/u/piyuxshp/"}
+                target="_blank"
+                className="hover:scale-125 transition-all duration-300 select-none"
+              >
+                <img
+                  src="/socials/leetcode.jpg"
+                  className="w-[30px] h-[30px] rounded-full bg-white select-none"
+                  alt="leetcode"
+                />
+              </Link>
+              <Link
+                href={"https://linkedin.com/in/piyushpatell"}
+                target="_blank"
+                className="hover:scale-125 transition-all duration-300 select-none"
+              >
+                <img
+                  src="/socials/linkedin.png"
+                  className="w-[30px] h-[30px] rounded-full bg-white select-none"
+                  alt="linkedin"
+                />
+              </Link>
+              <Link
+                href={"https://github.com/Piyushhpatel"}
+                target="_blank"
+                className="hover:scale-125 transition-all duration-300 select-none"
+              >
+                <img
+                  src="/socials/github.png"
+                  className="w-[30px] h-[30px] rounded-full bg-white select-none"
+                  alt="github"
+                />
+              </Link>
+              <Link
+                href={"https://x.com/astraphiliaa"}
+                target="_blank"
+                className="hover:scale-125 transition-all duration-300 select-none"
+              >
+                <img
+                  src="/socials/twitter.png"
+                  className="w-[30px] h-[30px] rounded-full bg-white select-none"
+                  alt="twitter"
+                />
+              </Link>
+          </div>
             </div>
             <ExpEdu/>
           </div>

@@ -3,9 +3,7 @@ import { ProjectData } from "@/data/data";
 
 const Projects = () => {
   return (
-    <div
-      className="max-w-[1024px] w-full  bg-gradient-to-t from-[#E88DFF] to-[#2DBFFE] p-[3px] rounded-[15px]"
-    >
+    <div className="max-w-[1024px] w-full  bg-gradient-to-t from-[#E88DFF] to-[#2DBFFE] p-[3px] rounded-[15px]">
       <div className="flex flex-col max-w-screen w-full h-full bg-[#0C162D] rounded-[12px] backdrop:blur-sm py-6 px-[20px]">
         <div>
           <h2 className="text-white text-[32px] text-center lg:text-start w-full font-normal underline leading-[48px]">
@@ -22,6 +20,11 @@ const Projects = () => {
                 key={item.id}
                 name={item.name}
                 thumbnail={item.thumbnail}
+                description={item.description}
+                link={item.link}
+                github={item.github}
+                technologies={item.technologies}
+                photo={item.photo}
               />
             ))}
           </div>
@@ -37,6 +40,11 @@ const Projects = () => {
                 key={item.id}
                 name={item.name}
                 thumbnail={item.thumbnail}
+                description={item.description}
+                link={item.link}
+                github={item.github}
+                technologies={item.technologies}
+                photo={item.photo}
               />
             ))}
           </div>
@@ -52,6 +60,11 @@ const Projects = () => {
                 key={item.id}
                 name={item.name}
                 thumbnail={item.thumbnail}
+                description={item.description}
+                link={item.link}
+                github={item.github}
+                technologies={item.technologies}
+                photo={item.photo}
               />
             ))}
           </div>

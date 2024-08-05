@@ -10,7 +10,7 @@ export function Words() {
 
   return (
     <div className="justify-center items-center">
-      <div className="text-[21px] z-10 font-normal mx-auto text-neutral-600 dark:text-neutral-400">
+      <div className="text-[21px] z-10 font-normal mx-auto text-neutral-400">
       I'm
         <FlipWords words={words} /> <br />
       </div>

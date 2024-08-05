@@ -132,41 +132,76 @@ export const ProjectData = {
     {
       id: 1,
       name: "Case Cobra",
-      thumbnail: "/projects/casecobra.png"
+      thumbnail: "/projects/casecobra.png",
+      description: "Case cobra is an e-commerce web app that allows user to customize custom iphone covers from and then place order to get there own customize mobile cover ",
+      link: "https://cobra-case-dev.vercel.app/",
+      github: "https://github.com/Piyushhpatel/cobra-case",
+      technologies: ["/devicons/nextjs.svg", "/devicons/typescript.svg", "/devicons/postgres.svg", "/devicons/prisma.svg"],
+      photo: "/projects/casecobra.png"
     },
     {
       id: 2,
       name: "Razorpay Landing Page",
-      thumbnail: "/projects/razorpay.png"
+      thumbnail: "/projects/razorpay.png",
+      description: "A fully Responsive Website Landing developed only using  Html and TailwindCSS with implementation of Semantic tags, flexbox, gridbox and subtle animations and deployed on Vercel.",
+      link: "https://razorpay-clone-sigma-five.vercel.app/",
+      github: "https://github.com/Piyushhpatel/razorpay-clone",
+      technologies: ["/devicons/tailwind.svg", "/devicons/vite.svg"],
+      photo: "/projects/razorpay.png"
     },
     {
       id: 3,
       name: "Weather App",
-      thumbnail: "/projects/weatherapp.png"
+      thumbnail: "/projects/weatherapp.png",
+      description: "This Website is integrated with Weather API. It is an API that fetches the current weather details including Temperature, Humidity, Pressure, Wind speed and much more.",
+      link: "https://aura-weather-app.vercel.app/",
+      github: "https://github.com/Piyushhpatel/weather-app",
+      technologies: ["/devicons/react.svg", "/devicons/tailwind.svg", "/devicons/javascript.svg"],
+      photo: "/projects/weatherapp.png"
     },
   ],
   App: [
     {
       id: 1,
       name: "Food Delivery App",
-      thumbnail: "/projects/bytecraft.png"
+      thumbnail: "/projects/bytecraft.png",
+      description: "A simple food ",
+      link: "",
+      github: "https://github.com/Piyushhpatel/food-delivery-ecommerce-app",
+      technologies: ["/devicons/flutter.svg", "/devicons/postman.svg"],
+      photo: "/projects/bytecraft.png"
     },
     {
       id: 2,
       name: "Mental Health Tracker",
-      thumbnail: "/projects/mindswell.jpeg"
+      thumbnail: "/projects/mindswell.jpeg",
+      description: "This a mental health tracker made in flutter that porvide various feature to handle track one's mental health",
+      link: "",
+      github: "https://github.com/Piyushhpatel/Mindswell",
+      technologies: ["/devicons/flutter.svg", "/devicons/firebase.svg"],
+      photo: "/projects/mindswell.jpeg"
     },
   ],
   Software: [
     {
       id: 1,
       name: "Mini C Compiler",
-      thumbnail: "/projects/compiler.jpeg"
+      thumbnail: "/projects/compiler.jpeg",
+      description: "This is a Basic C compiler that supports basic c constructs such as variables, conditionals and iterations. It takes c files as input and convert the source code into assembly code with printing the symbol table, inorder traversal of parse tree and intermediate code as three address code while giving syntax and semantic errors.",
+      link: "",
+      github: "https://github.com/Piyushhpatel/mini-c-compiler",
+      technologies: ["/devicons/cpp.svg"],
+      photo: "/projects/compiler.jpeg"
     },
     {
       id: 2,
-      name: "audittool",
-      thumbnail: "/projects/audittool.jpg"
+      name: "Security Audit Tool",
+      thumbnail: "/projects/audittool.jpg",
+      description: "This is a Plug-and-Play Security Audit System! (in simpler term sort of portable antivirus for now ). This project is designed to provide a seamless and efficient solution for conducting security audits on computer systems.",
+      link: "",
+      github: "https://github.com/Piyushhpatel/security-audit-system",
+      technologies: ["/devicons/python.svg", "/devicons/flutter.svg", "/devicons/firebase.svg"],
+      photo: "/projects/audittool.jpg"
     },
   ]
 }
