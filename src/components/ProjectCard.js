@@ -88,7 +88,7 @@ const ProjectCard = ({
                 alt={name}
                 className="mx-auto h-[350px] opacity-80 w-full object-cover rounded-lg"
               />
-              <h2 className="text-white text-2xl leading-3 font-semibold">{name}</h2>
+              <h2 className="text-white text-2xl leading-8 font-semibold">{name}</h2>
               <p className="text-white text-sm">{description}</p>
               <div className="space-y-4 gap-x-4 flex flex-col lg:flex-row items-center">
                 <p className="text-white text-md font-semibold">Technologies Used :</p>

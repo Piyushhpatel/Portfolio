@@ -133,6 +133,7 @@ export default function Home() {
               className={`text-center text-[16px] font-semibold w-full hover:scale-105 select-none  ${
                 activeSection === "aboutus" ? "text-white" : "text-white/80"
               }`}
+              onClick={() => setShowNav(false)}
             >
               <a href="#aboutus">About Us</a>
               <div
@@ -145,6 +146,7 @@ export default function Home() {
               className={`text-center text-[16px] font-semibold w-full hover:scale-105 select-none  ${
                 activeSection === "skills" ? "text-white" : "text-white/80"
               }`}
+              onClick={() => setShowNav(false)}
             >
               <a href="#skills">Skills</a>
               <div
@@ -154,23 +156,24 @@ export default function Home() {
               />
             </li>
             <li
-              className={`text-center text-[16px] font-semibold w-full hover:scale-105 select-none ${
-                activeSection === "projects" ? "text-white" : "text-white/80"
-              }`}
-            >
-              <a href="#projects">Projects</a>
-              <div
-                className={`h-[2px] bg-white w-full ${
-                  activeSection === "projects" ? "opacity-1" : "opacity-0"
+                className={`text-center text-[16px] font-semibold w-full hover:scale-105 select-none ${
+                  activeSection === "projects" ? "text-white" : "text-white/80"
                 }`}
-              />
-            </li>
+              >
+                <a href="#projects">Projects</a>
+                <div
+                  className={`h-[2px] bg-white w-full ${
+                    activeSection === "projects" ? "opacity-1" : "opacity-0"
+                  }`}
+                />
+              </li>
             <li
               className={`text-center text-[16px] font-semibold w-full hover:scale-105 select-none  ${
                 activeSection === "certificates"
                   ? "text-white"
                   : "text-white/80"
               }`}
+              onClick={() => setShowNav(false)}
             >
               <a href="#certificates">Certificates</a>
               <div
