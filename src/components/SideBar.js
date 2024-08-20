@@ -130,7 +130,7 @@ const SideBar = ({ activeSection = "aboutus" }) => {
             <div>
               <button 
               onClick={() => {
-                window.open('https://drive.google.com/file/d/1RvQnlUUilKUmtA-u_BR73goxmj_3bJfy/view?usp=sharing', '_blank');
+                window.open('https://drive.google.com/file/d/1XJmhB_ecW2YNqWo7b2qD0pLz2mVe7XKm/view?usp=sharing', '_blank');
               }}
               className="relative max-w-[210px] max-h-[50px] w-full h-full rounded-[15px] border border-white/80 text-white/80 px-8 py-2 overflow-hidden group select-none">
                 <div className="absolute top-0 -left-[100%] rounded-[15px] -z-[10] bg-[#B20DFF] h-full w-full group-hover:left-0 transition-all duration-300 ease-in-out"></div>

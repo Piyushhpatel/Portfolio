@@ -54,7 +54,7 @@ export default function Home() {
           <div className="flex gap-4 items-center">
             <div>
               <Link
-                href="https://drive.google.com/file/d/1RvQnlUUilKUmtA-u_BR73goxmj_3bJfy/view?usp=sharing"
+                href="https://drive.google.com/file/d/1XJmhB_ecW2YNqWo7b2qD0pLz2mVe7XKm/view?usp=sharing"
                 target="_blank"
               >
                 <GrDocumentText className="text-xl text-white/75" />
