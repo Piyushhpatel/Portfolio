@@ -1,7 +1,8 @@
-import { forwardRef } from 'react'
+import { forwardRef, memo } from 'react'
 import { Box, Spinner } from '@chakra-ui/react'
 
-export const DogSpinner = () => (
+// Spinner for loading
+export const DogSpinner = memo(() => (
   <Spinner
     size="xl"
     position="absolute"
@@ -10,10 +11,11 @@ export const DogSpinner = () => (
     ml="calc(0px - var(--spinner-size) / 2)"
     mt="calc(0px - var(--spinner-size))"
   />
-)
+));
 DogSpinner.displayName = 'DogSpinner';
 
-export const DogContainer = forwardRef(({ children }, ref) => (
+// Container component for the 3D model with forwarded ref
+export const DogContainer = forwardRef(({ children, ...rest }, ref) => (
   <Box
     ref={ref}
     className="voxel-dog"
@@ -23,19 +25,21 @@ export const DogContainer = forwardRef(({ children }, ref) => (
     w={[280, 480, 640]}
     h={[280, 480, 640]}
     position="relative"
+    {...rest} // Forward any additional props to the Box component
   >
     {children}
   </Box>
-))
+));
 DogContainer.displayName = 'DogContainer';
 
-const Loader = () => {
+// Loader component combining DogContainer and DogSpinner
+const Loader = memo(() => {
   return (
     <DogContainer>
       <DogSpinner />
     </DogContainer>
-  )
-}
+  );
+});
 Loader.displayName = 'Loader';
 
 export default Loader;

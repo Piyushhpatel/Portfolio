@@ -1,44 +1,35 @@
 "use client";
-import React, { useCallback, useEffect, useRef, useState } from "react";
-import { AnimatePresence, motion, LayoutGroup } from "framer-motion";
+import React, { useCallback, useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/libs/utils";
 
-export const FlipWords = ({
-  words,
-  duration = 2000,
-  className,
-}) => {
+export const FlipWords = ({ words, duration = 2000, className }) => {
   const [currentWord, setCurrentWord] = useState(words[0]);
   const [isAnimating, setIsAnimating] = useState(false);
 
   const startAnimation = useCallback(() => {
-    const word = words[words.indexOf(currentWord) + 1] || words[0];
-    setCurrentWord(word);
+    const nextIndex = (words.indexOf(currentWord) + 1) % words.length;
+    setCurrentWord(words[nextIndex]);
     setIsAnimating(true);
   }, [currentWord, words]);
 
   useEffect(() => {
-    if (!isAnimating)
-      setTimeout(() => {
+    const timer = setTimeout(() => {
+      if (!isAnimating) {
         startAnimation();
-      }, duration);
+      }
+    }, duration);
+
+    return () => clearTimeout(timer);
   }, [isAnimating, duration, startAnimation]);
 
   return (
     <AnimatePresence
-      onExitComplete={() => {
-        setIsAnimating(false);
-      }}
+      onExitComplete={() => setIsAnimating(false)}
     >
       <motion.div
-        initial={{
-          opacity: 0,
-          y: 10,
-        }}
-        animate={{
-          opacity: 1,
-          y: 0,
-        }}
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{
           duration: 0.4,
           ease: "easeInOut",
@@ -62,7 +53,7 @@ export const FlipWords = ({
       >
         {currentWord.split("").map((letter, index) => (
           <motion.span
-            key={currentWord + index}
+            key={index}
             initial={{ opacity: 0, y: 10, filter: "blur(8px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{

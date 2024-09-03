@@ -18,26 +18,36 @@ export default function Home() {
   const [activeSection, setActiveSection] = useState("aboutus");
   const [showNav, setShowNav] = useState(false);
 
-  const { ref: aboutInViewRef, inView: aboutInView } = useInView({
-    threshold: 0.5,
-  });
-  const { ref: skillInViewRef, inView: skillInView } = useInView({
-    threshold: 0.5,
-  });
-  const { ref: projectInViewRef, inView: projectInView } = useInView({
-    threshold: 0.5,
-  });
-  const { ref: certificateInViewRef, inView: certificateInView } = useInView({
-    threshold: 0.5,
-  });
+  // Use a ref to debounce the scroll events
+  const sectionRefs = {
+    aboutus: useRef(null),
+    skills: useRef(null),
+    projects: useRef(null),
+    certificates: useRef(null),
+  };
+
+  const handleScroll = () => {
+    const sectionEntries = Object.entries(sectionRefs).map(([section, ref]) => ({
+      section,
+      ref: ref.current,
+    }));
+
+    let currentSection = "";
+
+    for (const { section, ref } of sectionEntries) {
+      const { top, bottom } = ref.getBoundingClientRect();
+      if (top < window.innerHeight * 0.5 && bottom > window.innerHeight * 0.5) {
+        currentSection = section;
+      }
+    }
+
+    setActiveSection(currentSection);
+  };
 
   useEffect(() => {
-    if (aboutInView) setActiveSection("aboutus");
-    else if (skillInView) setActiveSection("skills");
-    else if (projectInView) setActiveSection("projects");
-    else if (certificateInView) setActiveSection("certificates");
-    else setActiveSection("");
-  }, [aboutInView, skillInView, projectInView, certificateInView]);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <>
@@ -48,23 +58,16 @@ export default function Home() {
         <nav className="lg:hidden flex items-center justify-between px-10 sticky z-[100] h-14 inset-x-0 top-0 w-full bottom-b border-white/70 bg-[#0C162D]/75 backdrop-blur-lg transition-all">
           <img
             src="/avtar.jpeg"
-            className="h-[30px] w-[30px] rounded-full opacity-75 "
+            className="h-[30px] w-[30px] rounded-full opacity-75"
             alt="avtar"
           />
           <div className="flex gap-4 items-center">
-            <div>
-              <Link
-                href="https://drive.google.com/file/d/1XJmhB_ecW2YNqWo7b2qD0pLz2mVe7XKm/view?usp=sharing"
-                target="_blank"
-              >
-                <GrDocumentText className="text-xl text-white/75" />
-              </Link>
-            </div>
-            <div>
-              <Link href="mailto:piyushpatel1746@gmail.com" target="_blank">
-                <MdEmail className="text-2xl text-white/75" />
-              </Link>
-            </div>
+            <Link href="https://drive.google.com/file/d/1XJmhB_ecW2YNqWo7b2qD0pLz2mVe7XKm/view?usp=sharing" target="_blank">
+              <GrDocumentText className="text-xl text-white/75" />
+            </Link>
+            <Link href="mailto:piyushpatel1746@gmail.com" target="_blank">
+              <MdEmail className="text-2xl text-white/75" />
+            </Link>
             <div
               className="cursor-pointer z-10"
               onClick={() => setShowNav(true)}
@@ -77,25 +80,25 @@ export default function Home() {
           <SideBar activeSection={activeSection} />
         </div>
         <div className="relative flex flex-col px-4 lg:px-0 justify-center items-center w-full gap-8 lg:ml-14">
-          <div ref={aboutInViewRef} id="aboutus" className="z-10 w-full">
+          <section ref={sectionRefs.aboutus} id="aboutus" className="z-10 w-full">
             <AboutUs />
-          </div>
-          <div ref={skillInViewRef} id="skills" className="z-10 w-full">
+          </section>
+          <section ref={sectionRefs.skills} id="skills" className="z-10 w-full">
             <Skills />
-          </div>
-          <div ref={projectInViewRef} id="projects" className="z-10 w-full">
+          </section>
+          <section ref={sectionRefs.projects} id="projects" className="z-10 w-full">
             <Projects />
-          </div>
-          <div ref={certificateInViewRef} id="certificates" className="w-full">
+          </section>
+          <section ref={sectionRefs.certificates} id="certificates" className="w-full">
             <Certificates />
-          </div>
+          </section>
         </div>
       </div>
-      <footer className="lg:hidden flex items-center justify-center px-10  z-[100] h-14 inset-x-0 bottom-0 w-full bottom-t border-white bg-[#0C162D] backdrop-blur-lg transition-all">
+      <footer className="lg:hidden flex items-center justify-center px-10 z-[100] h-14 inset-x-0 bottom-0 w-full bottom-t border-white bg-[#0C162D] backdrop-blur-lg transition-all">
         <p className="text-white text-sm">🌱 Made by Piyush Patel</p>
       </footer>
 
-      {/* Navigtaion Model */}
+      {/* Navigation Modal */}
       <Transition
         show={showNav}
         as={Fragment}
@@ -129,60 +132,22 @@ export default function Home() {
             </svg>
           </button>
           <ul className="flex flex-col items-center justify-center gap-3">
-            <li
-              className={`text-center text-[16px] font-semibold w-full hover:scale-105 select-none  ${
-                activeSection === "aboutus" ? "text-white" : "text-white/80"
-              }`}
-              onClick={() => setShowNav(false)}
-            >
-              <a href="#aboutus">About Me</a>
-              <div
-                className={`h-[2px] bg-white w-full ${
-                  activeSection === "aboutus" ? "opacity-1" : "opacity-0"
-                }`}
-              />
-            </li>
-            <li
-              className={`text-center text-[16px] font-semibold w-full hover:scale-105 select-none  ${
-                activeSection === "skills" ? "text-white" : "text-white/80"
-              }`}
-              onClick={() => setShowNav(false)}
-            >
-              <a href="#skills">Skills</a>
-              <div
-                className={`h-[2px] bg-white w-full ${
-                  activeSection === "skills" ? "opacity-1" : "opacity-0"
-                }`}
-              />
-            </li>
-            <li
+            {["aboutus", "skills", "projects", "certificates"].map((section) => (
+              <li
+                key={section}
                 className={`text-center text-[16px] font-semibold w-full hover:scale-105 select-none ${
-                  activeSection === "projects" ? "text-white" : "text-white/80"
+                  activeSection === section ? "text-white" : "text-white/80"
                 }`}
                 onClick={() => setShowNav(false)}
               >
-                <a href="#projects">Projects</a>
+                <a href={`#${section}`}>{section.charAt(0).toUpperCase() + section.slice(1)}</a>
                 <div
                   className={`h-[2px] bg-white w-full ${
-                    activeSection === "projects" ? "opacity-1" : "opacity-0"
+                    activeSection === section ? "opacity-1" : "opacity-0"
                   }`}
                 />
               </li>
-            <li
-              className={`text-center text-[16px] font-semibold w-full hover:scale-105 select-none  ${
-                activeSection === "certificates"
-                  ? "text-white"
-                  : "text-white/80"
-              }`}
-              onClick={() => setShowNav(false)}
-            >
-              <a href="#certificates">Certificates</a>
-              <div
-                className={`h-[2px] bg-white w-full ${
-                  activeSection === "certificates" ? "opacity-1" : "opacity-0"
-                }`}
-              />
-            </li>
+            ))}
           </ul>
         </div>
       </Transition>
