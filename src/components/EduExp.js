@@ -35,43 +35,35 @@ const ExpEdu = () => {
       <div className="w-full relative py-2 px-6 m-2 min-h-[100px]">
         <div className="absolute left-1 top-0 w-[2px] h-full bg-white/40" />
         {currentTab === "education" && (
-          <div className="flex flex-col gap-6">
-            <div className="relative flex flex-col gap-2">
+          <div className="flex flex-col gap-2">
               <div className="absolute left-[1px] top-4 w-[8px] h-[8px] rounded-full bg-white" />
-              <div className="pl-8">
                 <span className="text-white text-[16px] leading-[25px] font-[500]">
                   2020-2024
                 </span>
                 <span className="text-white/75 text-[14px] leading-[16px] font-normal">
                   Bachelors of Technology - Computer Science Engineering, Institute of Engineering and Science, IPS Academy
                 </span>
-              </div>
-            </div>
           </div>
         )}
         {currentTab === "experience" && (
           <div className="flex flex-col gap-6">
-            <div className="relative flex flex-col gap-2">
+            <div className="flex flex-col gap-2">
               <div className="absolute left-[1px] top-4 w-[8px] h-[8px] rounded-full bg-white" />
-              <div className="pl-8">
                 <span className="text-white text-[16px] leading-[25px] font-[500]">
                   2022-2023
                 </span>
                 <span className="text-white/75 text-[14px] leading-[16px] font-normal">
                   Core Member - Google Student Developer Club, IPS Academy
                 </span>
-              </div>
             </div>
-            <div className="relative flex flex-col gap-2">
+            <div className="flex flex-col gap-2">
               <div className="absolute left-[1px] top-[105px] w-[8px] h-[8px] rounded-full bg-white" />
-              <div className="pl-8">
                 <span className="text-white text-[16px] leading-[25px] font-[500]">
                   2023-2023
                 </span>
                 <span className="text-white/75 text-[14px] leading-[16px] font-normal">
                   Software Engineering Virtual Experience, JP Morgan Chase & Co.
                 </span>
-              </div>
             </div>
           </div>
         )}
