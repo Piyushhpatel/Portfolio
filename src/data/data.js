@@ -131,6 +131,16 @@ export const ProjectData = {
   Web: [
     {
       id: 1,
+      name: "The Prepmaster",
+      thumbnail: "/projects/prepmaster.png",
+      description: "It is a Platform for Accessing Past Papers & Notes for various courses.Intend to simplify and enhance exam preparation for students worldwide by providing easy access to a comprehensive collection of past exam papers and handwritten notes. We aim to foster a collaborative learning environment where students can share and benefit from high-quality study resources.",
+      link: "https://theprepmaster.com",
+      github: "#",
+      technologies: ["/devicons/react.svg", "/devicons/javascript.svg", "/devicons/mongodb.svg", "/devicons/tailwindc.svg", "/devicons/nodejs.svg"],
+      photo: "/projects/prepmaster.png"
+    },
+    {
+      id: 2,
       name: "Case Cobra",
       thumbnail: "/projects/casecobra.png",
       description: "Case cobra is an e-commerce web app that allows user to customize custom iphone covers from and then place order to get there own customize mobile cover ",
@@ -140,7 +150,7 @@ export const ProjectData = {
       photo: "/projects/casecobra.png"
     },
     {
-      id: 2,
+      id: 3,
       name: "Razorpay Landing Page",
       thumbnail: "/projects/razorpay.png",
       description: "A fully Responsive Website Landing developed only using  Html and TailwindCSS with implementation of Semantic tags, flexbox, gridbox and subtle animations and deployed on Vercel.",
@@ -150,7 +160,7 @@ export const ProjectData = {
       photo: "/projects/razorpay.png"
     },
     {
-      id: 3,
+      id: 4,
       name: "Weather App",
       thumbnail: "/projects/weatherapp.png",
       description: "This Website is integrated with Weather API. It is an API that fetches the current weather details including Temperature, Humidity, Pressure, Wind speed and much more.",
