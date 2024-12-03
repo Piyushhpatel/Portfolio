@@ -132,7 +132,7 @@ export default function Home() {
             </svg>
           </button>
           <ul className="flex flex-col items-center justify-center gap-3">
-            {["aboutus", "skills", "projects", "certificates"].map((section) => (
+            {["about", "skills", "projects", "certificates"].map((section) => (
               <li
                 key={section}
                 className={`text-center text-[16px] font-semibold w-full hover:scale-105 select-none ${
