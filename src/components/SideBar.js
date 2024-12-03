@@ -35,7 +35,7 @@ const SideBar = ({ activeSection = "aboutus" }) => {
         {/* Nav Links */}
         <div className="z-10 flex select-none">
           <ul className="flex flex-col items-center justify-center gap-3">
-            {["aboutus", "skills", "projects", "certificates"].map((section) => (
+            {["about", "skills", "projects", "certificates"].map((section) => (
               <li
                 key={section}
                 className={`text-center text-[16px] font-semibold w-full hover:scale-105 transition-transform select-none ${
