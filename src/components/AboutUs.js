@@ -34,7 +34,7 @@ const AboutUs = () => {
             <div className="lg:hidden mt-6 flex items-center gap-3">
               {[
                 { href: "https://leetcode.com/u/piyuxshp/", src: "/socials/leetcode.jpg", alt: "leetcode" },
-                { href: "https://linkedin.com/in/piyushpatell", src: "/socials/linkedin.png", alt: "linkedin" },
+                { href: "#", src: "/socials/linkedin.png", alt: "linkedin" },
                 { href: "https://github.com/Piyushhpatel", src: "/socials/github.png", alt: "github" },
                 { href: "https://x.com/astraphiliaa", src: "/socials/twitter.png", alt: "twitter" },
               ].map(({ href, src, alt }) => (
