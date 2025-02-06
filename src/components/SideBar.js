@@ -7,7 +7,7 @@ const SideBar = ({ activeSection = "aboutus" }) => {
 
   const handleResumeClick = () => {
     window.open(
-      "https://drive.google.com/file/d/1XJmhB_ecW2YNqWo7b2qD0pLz2mVe7XKm/view?usp=sharing",
+      "https://drive.google.com/file/d/15zlkYRthVyzLqnrbcJV5U7o5H1sMo2tj/view?usp=sharing",
       "_blank"
     );
   };
