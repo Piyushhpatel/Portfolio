@@ -62,7 +62,7 @@ export default function Home() {
             alt="avtar"
           />
           <div className="flex gap-4 items-center">
-            <Link href="https://drive.google.com/file/d/1XJmhB_ecW2YNqWo7b2qD0pLz2mVe7XKm/view?usp=sharing" target="_blank">
+            <Link href="https://drive.google.com/file/d/15zlkYRthVyzLqnrbcJV5U7o5H1sMo2tj/view?usp=sharing" target="_blank">
               <GrDocumentText className="text-xl text-white/75" />
             </Link>
             <Link href="mailto:piyushpatel1746@gmail.com" target="_blank">
